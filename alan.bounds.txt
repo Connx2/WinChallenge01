@@ -1,0 +1,6 @@
+git clone git@github-RSabounds:AutomationSupport/WinChallenge01.git
+git add *
+git commit -m "Adding my file"
+git pull
+git push
+
