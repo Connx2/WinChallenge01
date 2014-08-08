@@ -1,0 +1,77 @@
+Used Git for Windows GUI
+
+Selected "clone" when creating new repo
+Added "AutomationSupport"
+Created mark.son.txt in local repo
+Commited file to repo
+Sync to push file to repo
+
+
+1. DSC is built on what Windows scripting language?
+Powershell
+
+
+2. Where can you get the the Free DSC e-book?
+http://powershell.org/wp/ebooks
+
+
+3. What's the difference between a Push and Pull model? (FYI we'll be using Pull with our customers)
+MOF files are run locally on the node via local config mgr.
+MOF files are stored on pull server which nodes periodically check in with and copy down resources they're missing.
+
+
+4. In the pull model, where does a client node look for its configuration updates?
+The configured pull server
+
+
+5. What format is the compiled configuration script in?
+MOF
+
+
+6. Why should you use SSL/HTTPS with the Pull Server model?
+To secure traffic between nodes and pull server.
+
+
+7. Where would you configure the DSC refresh interval?
+Local Configuration Manager (LCM)
+
+
+8. Which DSC resource module is used in the configuration script to create the pull server and its web services?
+xPSDesiredStateConfiguration
+
+
+9. In a DSC configuration file, what does the following script block do?
+
+                WindowsFeature IIS
+                                                {
+                                                                Ensure   = "Present"
+                                                                Name     = "Web-Server"
+                                                }
+
+Installs IIS role
+
+
+10. What configuration script variable tells a client node the location of the pull server? *hint - minute 36 of the presentation.
+ServerUrl
+
+
+11. What is OMI?
+Open Management Infrastructure - Used by DSC to manage Linux
+
+
+12. What rocks the world?
+DSC on Linux
+
+
+13. What are the three pre-defined functions of a DSC resource module?
+Get-TargetResource
+Set-TargetResource
+Test-TargetResource
+
+14. What's the GitHub repo URL for the Powershell.org community? 
+https://github.com/PowerShellOrg
+
+15. What resources are available in the xNetworking module?
+xIPAddress
+xDNSServerAddress
+xFirewall
