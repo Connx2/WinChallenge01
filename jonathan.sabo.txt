@@ -2,3 +2,54 @@ git clone https://github.com/AutomationSupport/WinChallenge01.git
 git add jonathan.sabo.txt
 git commit -m"Add Jon Sabo's text file"
 git push origin master
+
+
+1. DSC is built on what Windows scripting language?
+ Powershell
+2. Where can you get the the Free DSC e-book?
+ Powershell.org
+3. What's the difference between a Push and Pull model? (FYI we'll be using Pull with our customers)
+ Exactly what it sounds like, you can push a configuration to a specific node (or push to a local node) without it asking for it, or a node can be configured to periodically request (pull) its configuration from a pull server. 
+
+4. In the pull model, where does a client node look for its configuration updates?
+ From the URI specified as the pull server
+
+5. What format is the compiled configuration script in?
+ MOF
+
+6. Why should you use SSL/HTTPS with the Pull Server model?
+Same reason you’d encrypt anything else, could be  
+
+7. Where would you configure the DSC refresh interval?
+ In the localconfiguration under RefreshFrequencyMins
+
+8. Which DSC resource module is used in the configuration script to create the pull server and its web services?
+ xDscWebService
+
+9. In a DSC configuration file, what does the following script block do?
+ 
+                WindowsFeature IIS
+                                                {
+                                                                Ensure   = "Present"
+                                                                Name     = "Web-Server"
+                                                }
+ Ensures that IIS is installed
+ 
+10. What configuration script variable tells a client node the location of the pull server? *hint - minute 36 of the presentation.
+ ServerUrl
+
+11. What is OMI?
+Open Mgmt Infra, a CIM server for Linux so you can use Ws-Man, man
+ 
+12. What rocks the world?
+DSC on Linux
+ 
+13. What are the three pre-defined functions of a DSC resource module?
+Start-DscConfiguration
+ 
+14. What's the GitHub repo URL for the Powershell.org community? 
+https://github.com/powershellorg/
+
+ 
+15. What resources are available in the xNetworking module?
+xIPAddress, xDnsServerAddress, xFirewall
