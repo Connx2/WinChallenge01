@@ -1,0 +1,5 @@
+git clone https://github.com/AutomationSupport/WinChallenge01
+git add Jose.Marino.txt
+git commit -m "Adding Jose.Marino File"
+git pull
+git push
