@@ -1,0 +1,56 @@
+$ git clone https://github.com/AutomationSupport/WinChallenge01
+Cloning into 'WinChallenge01'...
+remote: Counting objects: 10, done.
+remote: Compressing objects: 100% (6/6), done.
+remote: Total 10 (delta 0), reused 10 (delta 0)
+Unpacking objects: 100% (10/10), done.
+Checking connectivity... done.
+
+
+git add andy.wine.txt
+git commit -m "Add Andy's File"
+git push origin master
+
+
+
+
+1. DSC is built on what Windows scripting language?  Powershell
+
+2. Where can you get the the Free DSC e-book?   https://onedrive.live.com/view.aspx?cid=7F868AA697B937FE&resid=7F868AA697B937FE!156&app=Word
+
+3. What's the difference between a Push and Pull model? (FYI we'll be using Pull with our customers)
+
+   Push – Uses Start-DscConfiguration to copy MOF to the target node.  The node then checks the configuration and again every 15 minutes (by default).  Manual process.  Non-core DSC resources must be manually deployed to nodes.
+   Pull – Uses push mode to enroll the target node by configuring the pull server information.  Target nose then checks every 30 minutes to re-apply the configuration.  All resources and MOFs must be put on the pull server for the nodes to copy down.
+
+4. In the pull model, where does a client node look for its configuration updates?  The configured pull server.
+
+5. What format is the compiled configuration script in?  MOF
+
+6. Why should you use SSL/HTTPS with the Pull Server model?  Security.  The configuration files could be easily spoofed.
+
+7. Where would you configure the DSC refresh interval?  LCM
+
+8. Which DSC resource module is used in the configuration script to create the pull server and its web services?   Start-DscConfiguration
+
+9. In a DSC configuration file, what does the following script block do?  Ensure the node have the IIS feature installed.
+
+	WindowsFeature IIS
+			{
+				Ensure 	= "Present"
+				Name	= "Web-Server"
+			}
+
+
+10. What configuration script variable tells a client node the location of the pull server? *hint - minute 36 of the presentation.   ServerUrl
+
+11. What is OMI?  Powershell DSC for Linux
+
+12. What rocks the world?  Desired State Configuration on LINUX
+
+13. What are the three pre-defined functions of a DSC resource module?  get, test, and set target resource.
+
+14. What's the GitHub repo URL for the Powershell.org community? http://GitHub.com/powershellorg/DSC
+
+15. What resources are available in the xNetworking module?  xIPAddress, xDNSServerAddress, xFirewall
+
