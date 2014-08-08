@@ -1,0 +1,4 @@
+git clone https://github.com/AutomationSupport/WinChallenge01.git
+git add jonathan.sabo.txt
+git commit -m"Add Jon Sabo's text file"
+git push origin master
